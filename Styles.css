@@ -4,6 +4,9 @@ body {
   background-color: #121212;
 }
 
+html {
+  font-size: 27px;
+}
 main {
   color: white;
   height: 100vh;
@@ -11,6 +14,10 @@ main {
 
 section {
   height: 100vh;
+}
+
+nav {
+  padding: 15px;
 }
 
 nav ul {
@@ -24,25 +31,52 @@ nav ul {
 nav ul li a {
   color: white;
 }
-section .hero {
+
+section.hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+  place-content: center;
   gap: 20px;
 }
+
 section.hero .hero-text {
   display: flex;
   flex-direction: column;
-  font-size: 1, 2em;
+  font-size: 1.2em;
+  text-align: center;
+  align-items: center;
 }
+
 .hero-text h1 {
-  font-size: 2, 5em;
+  font-size: 2.5em;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .hero-text h2 {
   font-size: 1.4em;
   margin: 0;
+}
+
+.hero-text p {
+  font-size: italic;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 0;
+  width: 40ch;
+  color: pink;
+}
+
+.hero-text p::before {
+  content: "“";
+  font-size: 2em;
+  color: #fc0db0;
+}
+.hero-text p::after {
+  content: "”";
+  font-size: 2em;
+  color: #fc0db0;
 }
 .text-accent {
   color: #fc0db0;
@@ -51,10 +85,26 @@ section.hero .hero-text {
 .text-primary {
   color: #8d1cf7;
 }
+
 .hero img {
-  height: 100;
-  max-width: 500px;
+  max-width: 400px;
   object-fit: contain;
   border-radius: 15px;
   min-width: 200px;
+  width: 100px;
+}
+
+section.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+section.skills ul li {
+  width: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
 }
